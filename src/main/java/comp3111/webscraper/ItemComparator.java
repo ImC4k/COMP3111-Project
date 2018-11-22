@@ -9,7 +9,7 @@ import java.util.Comparator;
  */
 public class ItemComparator implements Comparator<Item> {
 	/**
-	 * Used in task 2.
+	 * Compare two items. Used in task 2.
 	 * @author awtang
 	 * @param i1 the first item
 	 * @param i2 the second item

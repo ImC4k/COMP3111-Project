@@ -519,7 +519,6 @@ public class Controller extends WebScraperApplication {
      */
     @FXML
     private void refineButtonClick() {
-    	
     	// if currSearch is null, return
     	if(currSearch == null) {
     		refineButton.setDisable(true);
@@ -531,7 +530,6 @@ public class Controller extends WebScraperApplication {
     	updateUI(currSearch);
     	// set the button disable
     	refineButton.setDisable(true);
-    	
     }
     
     /**
@@ -542,24 +540,21 @@ public class Controller extends WebScraperApplication {
      * @param filter keep the Item if contains the filter
      */
     private void refineSearch(List<Item> target, String filter) {
-    	
     	// help to remove the items in the list
     	Predicate<Item> pred = p-> p.getTitle().indexOf(filter) == -1;
     	// remove if condition meet
     	target.removeIf(pred);
-    	
     }
     
     /**
      * 	This function is helper function to test refineSearch
      * 
-     * @author	lyleungad
-     * @param	items the list of items to be tested
-     * @param	k the keyword to be filtered
-     * @return	the size of currSearch after filtering
+     * @author lyleungad
+     * @param items the list of items to be tested
+     * @param k the keyword to be filtered
+     * @return the size of currSearch after filtering
      */
     public int testRefineSearch(List<Item> items, String k) {
-    	
     	refineSearch(items, k);
     	return items.size();
     }
